@@ -1,0 +1,91 @@
+body{
+    background-color: #C7E0FA;
+    margin: 0;
+    padding: 0;
+}
+
+.coffee-title{
+    color: #234d6d;
+    text-align: center;
+    padding-top: 70px;
+    font-size: 60px;
+}
+ 
+/* The coffee cup */
+
+.coffeecup{
+    position: absolute;
+    background-color: #fff;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    width: 190px;
+    height: 190px;
+    border-bottom-left-radius: 65px;
+    border-bottom-right-radius: 65px;
+    box-shadow: 0 2px 2px -2px gray;
+}
+
+/* The actual coffee */
+
+.coffeecup::before{
+    content: "";
+    background-color: #b36e00;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 40px;
+    width: 190px;
+    border-radius: 50%;
+    border: 7px solid #fff;
+    box-sizing: border-box;
+    transform: translate(0, -50%);
+    box-shadow: inset 0 0 15px #663800;
+}
+
+/* The handle */
+
+.coffeecup::after{
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    top: 45%;
+    left: 80px;
+    height: 140px;
+    width: 170px;
+    border-radius: 50%;
+    border: 15px solid #fff;
+    box-sizing: border-box;
+    transform: translate(0, -50%);
+}
+
+/* The steam */
+
+ul{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: -55px;
+    transform: translateX(25%);
+    width: 100%;
+}
+
+ul li{
+    list-style-type: none;
+    width: 4px;
+    height: 45px;
+    background-color: #fff;
+    float: left;
+    margin: 10px;
+    animation: steam 10s ease-in-out infinite;
+}
+  
+@keyframes steam {
+
+    0%    { opacity: 0; }
+    25%   { opacity: 1; }
+    50%   { opacity: 0; }
+    75%   { opacity: 1; }
+    100%  { opacity: 0; }
+
+}
